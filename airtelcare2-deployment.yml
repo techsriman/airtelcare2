@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: airtelcare2deployment
+  labels:
+    app: airtelcare2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: airtelcare2
+      version: "1.0"
+  template:
+    metadata:
+      labels:
+        app: airtelcare2
+        version: "1.0"
+    spec:
+      containers:
+        - name: airtelcare2container
+          image: techsriman/airtelcare2:1.0
+          ports:
+            - name: airtelcare2port
+              containerPort: 8080
+              protocol: TCP
+                  
