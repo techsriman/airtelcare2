@@ -12,7 +12,7 @@
             }
             .inputForm {
                 border-radius: 5px;
-                background-color: antiquewhite;
+                background-color: aquamarine;
                 padding: 20px;
                 width: 50%;
                 margin: auto;
