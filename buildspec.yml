@@ -15,8 +15,8 @@ phases:
   post_build:
     commands:
       - mvn package
-  artifacts:
-    files:
-      - target/airtelcare2.war
-    discard-paths: yes
+artifacts:
+  files:
+    - target/airtelcare2.war
+  discard-paths: yes
 ...
