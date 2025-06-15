@@ -1,0 +1,22 @@
+---
+version: 0.2
+phases:
+  install:
+    run-as: root
+    on-failure: ABORT
+    commands:
+      - sudo apt update -y
+      - sudo apt install -y openjdk-17-jdk
+      - sudo apt install -y maven
+  build:
+    commands:
+      - echo "build started at `date`"
+      - mvn test
+  post_build:
+    commands:
+      - mvn package
+  artifacts:
+    files:
+      - target/airtelcare2.war
+    discard-paths: yes
+...
