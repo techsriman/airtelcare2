@@ -1,0 +1,14 @@
+version: 0.2
+os: linux
+files:
+  - source: /airtelcare2.war
+    destination: /home/ec2-user/apache-tomcat-11.0.8/webapps/
+hooks:
+  AfterInstall:
+    - location: serverStart.sh
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: serverStop.sh
+      timeout: 300
+      runas: root

@@ -18,5 +18,8 @@ phases:
 artifacts:
   files:
     - target/airtelcare2.war
+    - scripts/serverStart.sh
+    - scripts/serverStop.sh
+    - appspec.yml
   discard-paths: yes
 ...
